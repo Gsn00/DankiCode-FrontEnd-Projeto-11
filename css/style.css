@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat'; }
+
+body {
+  min-height: 100vh; }
+
+/* INICIO CLASSES AUXILIARES */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2%; }
+
+.logo {
+  width: 180px;
+  height: 50px;
+  background-image: url("../images/logo.png"); }
+  .logo a {
+    display: inline-block;
+    width: 100%;
+    height: 100%; }
+
+.background-clip {
+  z-index: -1;
+  background-color: #f7f7f7;
+  position: absolute;
+  width: 100%;
+  height: 1400px;
+  clip-path: polygon(0 0, 100% 0%, 100% 10%, 0 79%); }
+  .background-clip::after {
+    content: '';
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f9f9f9;
+    clip-path: polygon(0 0, 0% 100%, 100% 50%); }
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: #11223f; }
+
+p {
+  font-size: 18px;
+  line-height: 28px;
+  color: #11223f;
+  margin-bottom: 30px; }
+
+/* FIM CLASSES AUXILIARES */
+header {
+  padding: 25px 0; }
+  header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    header .container .desktop-menu a {
+      margin-left: 35px;
+      text-decoration: none;
+      color: black;
+      padding: 20px 0;
+      font-size: 15px; }
+      header .container .desktop-menu a.download-button {
+        padding: 20px 50px;
+        color: white;
+        background-color: #30851d;
+        box-shadow: 0px 0px 10px #30851d;
+        white-space: nowrap; }
+    header .container .mobile-menu {
+      display: none;
+      font-size: 36px;
+      cursor: pointer; }
+
+.chamada .container {
+  display: flex;
+  align-items: center;
+  padding: 60px 2%; }
+  .chamada .container .game-about {
+    width: 60%;
+    padding-right: 80px; }
+  .chamada .container .game-image {
+    background-image: url("../images/hero.jpg");
+    background-size: cover;
+    width: 45%;
+    padding-top: 40%; }
+
+.depoimentos .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 60px 2%; }
+  .depoimentos .container .depoimento-single {
+    display: flex;
+    width: 48%;
+    background-color: white;
+    padding: 30px;
+    gap: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); }
+    .depoimentos .container .depoimento-single p {
+      font-size: 16px; }
+    .depoimentos .container .depoimento-single span {
+      font-size: 14px;
+      font-weight: bold;
+      color: #55c14e; }
+    .depoimentos .container .depoimento-single img {
+      align-self: flex-start; }
+
+.sobre .container {
+  padding: 60px 2%; }
+  .sobre .container h2 {
+    font-size: 32px;
+    display: inline-block;
+    position: relative;
+    padding: 20px 0; }
+    .sobre .container h2:after {
+      content: '';
+      width: 40%;
+      height: 4px;
+      background-color: #2bb222;
+      position: absolute;
+      top: 100%;
+      left: 0; }
+  .sobre .container .sobre-content {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .sobre .container .sobre-content .sobre-box {
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      max-width: 450px; }
+      .sobre .container .sobre-content .sobre-box .sobre-box-title {
+        display: flex;
+        text-align: center; }
+        .sobre .container .sobre-content .sobre-box .sobre-box-title h3 {
+          text-align: left;
+          padding: 25px;
+          font-size: 20px;
+          background-color: #f1f6f1;
+          color: #11223f;
+          display: flex;
+          align-items: center;
+          width: 80%; }
+        .sobre .container .sobre-content .sobre-box .sobre-box-title ion-icon {
+          background-color: #2bb222;
+          color: white;
+          width: 20%;
+          min-height: 50px;
+          height: auto;
+          padding: 35px;
+          vertical-align: middle; }
+      .sobre .container .sobre-content .sobre-box p {
+        display: flex;
+        font-size: 16px;
+        padding: 30px; }
+
+footer {
+  background-color: #effeee; }
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 2%; }
+    footer .container .social-media a {
+      margin-left: 35px;
+      text-decoration: none;
+      font-size: 28px;
+      color: #515151; }
+
+@media screen and (max-width: 980px) {
+  .chamada .container {
+    flex-wrap: wrap;
+    gap: 25px; }
+    .chamada .container .game-about {
+      width: 100%;
+      padding: 0; }
+    .chamada .container .game-image {
+      width: 100%;
+      padding-top: 90%; } }
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 28px; }
+
+  .container {
+    padding-right: 5% !important;
+    padding-left: 5% !important; }
+
+  header .container {
+    padding-right: 5% !important;
+    padding-left: 5% !important; }
+    header .container .desktop-menu {
+      display: none; }
+    header .container .mobile-menu {
+      display: block; }
+
+  .depoimentos .container .depoimento-single {
+    width: 100%; }
+    .depoimentos .container .depoimento-single p {
+      font-size: 14px; }
+
+  .sobre .container h2 {
+    font-size: 18px; }
+  .sobre .container .sobre-content {
+    flex-direction: column;
+    align-items: center; }
+    .sobre .container .sobre-content .sobre-box {
+      width: 100% !important; }
+      .sobre .container .sobre-content .sobre-box ion-icon {
+        padding: 20px !important; }
+
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 45px; }
+    footer .container .social-media a {
+      margin: 0 20px 0 20px; } }
+
+/*# sourceMappingURL=style.css.map */
